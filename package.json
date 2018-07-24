@@ -1,0 +1,30 @@
+{
+  "name": "hotml",
+  "version": "1.0.0",
+  "description": "create dom trees in js",
+  "main": "src/index.js",
+  "kuta": {
+    "files": [
+      "tests/test.js"
+    ],
+    "requires": ["jsdom-global/register"]
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "pretest": "npm run build:node",
+    "test": "kuta",
+    "prepublishOnly": "npm run build",
+    "build:web": "rollup -c rollup.config.js --environment MINIFY -o dist/browser.js -f iife --name h",
+    "build:node": "rollup -c rollup.config.js -o dist/main.js -f cjs"
+  },
+  "author": "d-dog@d-dog.se",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^5.2.0",
+    "rollup": "^0.63.4",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-terser": "^1.0.1"
+  }
+}
