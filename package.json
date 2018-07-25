@@ -8,9 +8,6 @@
   "kuta": {
     "files": [
       "tests/test.js"
-    ],
-    "requires": [
-      "jsdom-global/register"
     ]
   },
   "directories": {
@@ -28,6 +25,8 @@
   "license": "MIT",
   "devDependencies": {
     "eslint": "^5.2.0",
+    "jsdom": "^11.11.0",
+    "jsdom-global": "^3.0.2",
     "kuta": "^1.7.4",
     "rollup": "^0.63.4",
     "rollup-plugin-node-resolve": "^3.3.0",
