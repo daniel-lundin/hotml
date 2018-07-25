@@ -22,21 +22,12 @@ function createElement(type, props, children) {
 
   return element;
 }
-const tags = [
-  "p",
-  "div",
-  "img",
-  "span",
-  "h1",
-  "h2",
-  "h3",
-  "button",
-  "ul",
-  "li"
-];
 
-export default tags.reduce((acc, tag) => {
-  return Object.assign(acc, {
-    [tag]: (props, children = []) => createElement(tag, props, children)
-  });
-}, {});
+export default new Proxy(
+  {},
+  {
+    get(obj, prop) {
+      return (props, children = []) => createElement(prop, props, children);
+    }
+  }
+);
