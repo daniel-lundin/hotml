@@ -2,7 +2,9 @@
   "name": "hotml",
   "version": "1.0.0",
   "description": "create dom trees in js",
-  "main": "src/index.js",
+  "main": "dist/main.js",
+  "source": "src/index.js",
+  "browser": "dist/browser.js",
   "kuta": {
     "files": [
       "tests/test.js"
@@ -26,5 +28,8 @@
     "rollup": "^0.63.4",
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-terser": "^1.0.1"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
