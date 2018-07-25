@@ -11,7 +11,7 @@ test.afterEach(() => {
   browser();
 });
 
-test("generate dom", () => {
+test("generating proper dom", () => {
   document.body.appendChild(
     h.ul({ class: "hej" }, [h.li({}, "1"), h.li({}, "2"), h.li({}, "3")])
   );
@@ -36,4 +36,10 @@ test("add event listener", () => {
   document.querySelector("div").dispatchEvent(event);
 
   assert(clicked);
+});
+
+test("using h.createElement", () => {
+  const element = h.createElement("div", {}, "tjena");
+
+  assert.equal(element.outerHTML, "<div>tjena</div>");
 });

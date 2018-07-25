@@ -27,7 +27,11 @@ export default new Proxy(
   {},
   {
     get(obj, prop) {
-      return (props, children = []) => createElement(prop, props, children);
+      if (typeof prop === "string") {
+        if (prop === "createElement") return createElement;
+        return (props, children = []) => createElement(prop, props, children);
+      }
+      return "h🔥tml";
     }
   }
 );
