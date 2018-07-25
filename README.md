@@ -1,5 +1,7 @@
 # H🔥TML
 
+[![Build Status](https://travis-ci.org/daniel-lundin/hotml.svg?branch=master)](https://travis-ci.org/daniel-lundin/hotml)
+
 Tiny helper(321 bytes) for creating complex DOM structues. Can be used as a target for JSX.
 
 Example:
