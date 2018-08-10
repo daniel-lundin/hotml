@@ -2,8 +2,9 @@
 
 [![Build Status](https://travis-ci.org/daniel-lundin/hotml.svg?branch=master)](https://travis-ci.org/daniel-lundin/hotml)
 [![npm version](https://badge.fury.io/js/hotml.svg)](https://badge.fury.io/js/hotml)
+[![gzip size](http://img.badgesize.io/https://unpkg.com/hotml/dist/browser.js?compression=gzip&color=blue)](https://unpkg.com/hotml/dist/browser.js)
 
-Tiny helper(321 bytes) for creating complex DOM structues. Can be used as a target for JSX.
+Tiny helper(353 bytes) for creating complex DOM structues. Can be used as a target for JSX.
 
 Example:
 
