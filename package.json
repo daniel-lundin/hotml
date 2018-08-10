@@ -1,6 +1,6 @@
 {
   "name": "hotml",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "create dom trees in js",
   "main": "dist/main.js",
   "source": "src/index.js",
