@@ -9,6 +9,10 @@ function createElement(type, props, children) {
   attributes.forEach(prop => {
     element.setAttribute(prop, props[prop]);
   });
+  Object.keys(props.style || {}).forEach(
+    key => (element.style[key] = props.style[key])
+  );
+
   eventHandlers.forEach(handler => {
     const eventName = handler.substr(2).toLowerCase();
     element.addEventListener(eventName, props[handler]);

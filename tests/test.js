@@ -43,3 +43,9 @@ test("using h.createElement", () => {
 
   assert.equal(element.outerHTML, "<div>tjena</div>");
 });
+
+test("apply styles", () => {
+  const element = h.div({ style: { backgroundColor: "red" } }, "red");
+
+  assert.equal(element.style.backgroundColor, "red");
+});
